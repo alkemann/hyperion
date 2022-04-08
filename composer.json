@@ -1,0 +1,10 @@
+{
+    "require": {
+        "alkemann/h2l": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "backend\\": "backend/"
+        }
+    }
+}
