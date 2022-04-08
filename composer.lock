@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "011250445af19320ca5d9ad34fd974d5",
+    "content-hash": "2e72aaa28fd6ce3c54022c0b32abc4ac",
     "packages": [
         {
             "name": "alkemann/h2l",
@@ -82,7 +82,9 @@
     },
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
+    "platform": {
+        "php": "^8.0"
+    },
     "platform-dev": [],
     "plugin-api-version": "2.2.0"
 }
