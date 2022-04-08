@@ -18,6 +18,10 @@ echo " - Resetting release branch"
 git checkout release -q
 git merge master -q -m "Merge Master into Release"
 git reset -q master
+
+npm run build
+
+git add -f webroot/css/tailwind.css
 git add --all
 
 echo " - Removing server.php that is used for local host serving"
