@@ -19,7 +19,7 @@ Environment::set([
     ]
 ], Environment::ALL);
 
-Log::handler('file', [Log::class, 'file']);
+Log::handler('standard', [Log::class, 'std']);
 
 // Middleware to add a log response for request and what response handler is chosen
 Environment::addMiddle(
