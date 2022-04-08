@@ -8,13 +8,13 @@ $CONFIG_PATH = $ROOT . $DS . 'config' . $DS;
 require_once($VENDOR_PATH . 'autoload.php');
 
 // Default error handling
-require_once($CONFIG_PATH . 'error_handlers.php');
-set_exception_handler('app\handleError');
-set_error_handler('app\handleWarning', E_WARNING);
+// require_once($CONFIG_PATH . 'error_handlers.php');
+// set_exception_handler('app\handleError');
+// set_error_handler('app\handleWarning', E_WARNING);
 
 // Include configuration files
 require_once($CONFIG_PATH . 'environments.php');
-require_once($CONFIG_PATH . 'connections.php');
+// require_once($CONFIG_PATH . 'connections.php');
 // ***********
 
 use alkemann\h2l\{
