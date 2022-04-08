@@ -34,7 +34,7 @@ Environment::addMiddle(
 );
 
 // LOCAL or PROD expected
-Environment::setEnvironment(getenv('ENV') ?? Environment::PROD);
+Environment::setEnvironment(getenv('ENV') === false ? Environment::PROD : getenv('ENV'));
 
 Router::alias('/', 'home.html');
 
