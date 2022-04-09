@@ -1,19 +1,22 @@
 <?php
 
-use alkemann\h2l\{Log, Environment, Router, Request, Response, util\Chain};
+use alkemann\h2l\{ Log, Environment, Router, Request, Response, util\Chain, response\Page };
 
 $base = dirname(dirname(__FILE__)) . DIRECTORY_SEPARATOR ;
 
 Environment::set([
     Environment::LOCAL => [
         'debug' => true,
-        'logs_path' => $base . 'resources' . DIRECTORY_SEPARATOR . 'logs' . DIRECTORY_SEPARATOR,
+        'content_path' => $base . 'pages' . DIRECTORY_SEPARATOR,
+        'layout_path'  => $base . 'layouts' . DIRECTORY_SEPARATOR
+    ],
+    Environment::DEV => [
+        'debug' => true,
         'content_path' => $base . 'pages' . DIRECTORY_SEPARATOR,
         'layout_path'  => $base . 'layouts' . DIRECTORY_SEPARATOR
     ],
     Environment::PROD => [
         'debug' => false,
-        'logs_path' => $base . 'resources' . DIRECTORY_SEPARATOR . 'logs' . DIRECTORY_SEPARATOR,
         'content_path' => $base . 'pages' . DIRECTORY_SEPARATOR,
         'layout_path'  => $base . 'layouts' . DIRECTORY_SEPARATOR
     ]
@@ -32,6 +35,15 @@ Environment::addMiddle(
     },
     Environment::ALL
 );
+Environment::addMiddle(function(Request $request, Chain $chain): Response {
+    $response = $chain->next($request, $chain);
+    if ($response instanceof Page && $request->header('HX-Request')) {
+        Log::debug('== HTMX Request ===');
+        $response->layout = $request->header('HX-Boosted') ? 'boosted' : false ;
+    }
+    return $response;
+}, Environment::ALL);
+
 
 // LOCAL or PROD expected
 Environment::setEnvironment(getenv('ENV') === false ? Environment::PROD : getenv('ENV'));

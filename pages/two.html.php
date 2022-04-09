@@ -1,6 +1,8 @@
-<?php $faker = Faker\Factory::create(); ?>
+<?php
+$faker = Faker\Factory::create();
+?>
 
-<h2 class="text-xl mb-2">Home</h2>
+<h2 class="text-xl mb-2">Two</h2>
 <hr>
 <div>
   <dl>

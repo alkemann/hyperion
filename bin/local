@@ -11,7 +11,7 @@ DB=tests
 # Can override the port through `bin/local.sh 8088`
 WEBPORT=${1:-8080}
 
-export ENV='LOCAL'
+export ENV='DEV'
 open http://localhost:$WEBPORT
 php -S localhost:$WEBPORT -t webroot webroot/server.php &
 SERVER_PID=$!
