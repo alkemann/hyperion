@@ -3,9 +3,7 @@
     "require": {
 		"php": "^8.0",
         "alkemann/h2l": "dev-master",
-        "alkemann/debug": "^0.4.0"
-    },
-    "require-dev": {
+        "alkemann/debug": "^0.4.0",
         "fakerphp/faker": "^1.19"
     }
 }
