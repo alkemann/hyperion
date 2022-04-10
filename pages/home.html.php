@@ -9,5 +9,13 @@
   <ul class="ml-4">
     <li><a href="https://htmx.org/docs/#boosting">HTMX Boosting</a></li>
   </ul>
+  <li>Polling (the news sidebar is refreshed every 20 seconds independent of other boosted navigation</li>
+  <ul class="ml-4">
+    <li><a href="https://htmx.org/docs/#polling">HTMX Polling</a></li>
+  </ul>
+  <li>Endless scroll (Try scrolling on the <a href="/news">news section</a>.</li>
+  <ul class="ml-4">
+    <li></li>
+  </ul>
   <li>A todo list?</li>
 </ol>
