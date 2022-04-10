@@ -6,6 +6,6 @@
   <dl>
     <dt>faker->name()</dt><dd><?=$faker->name()?></dd>
     <dt>faker->email()</dt><dd><?=$faker->email()?></dd>
-    <dt>faker->text()</dt><dd><?=$faker->text()?></dd>
-  </dl>
+    <dt>faker->text()</dt><dd><?=$faker->catchPhrase()?></dd>
+</dl>
 </div>
