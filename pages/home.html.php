@@ -5,6 +5,9 @@
 <hr>
 <h3>Features</h3>
 <ol>
-  <li>Partial page content (header and sidebar says when that makes sense)</li>
+  <li>Partial page content (replace content, keep sidebar)</li>
+  <ul class="ml-4">
+    <li><a href="https://htmx.org/docs/#boosting">HTMX Boosting</a></li>
+  </ul>
   <li>A todo list?</li>
 </ol>
