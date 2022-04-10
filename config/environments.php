@@ -8,17 +8,20 @@ Environment::set([
     Environment::LOCAL => [
         'debug' => true,
         'content_path' => $base . 'pages' . DIRECTORY_SEPARATOR,
-        'layout_path'  => $base . 'layouts' . DIRECTORY_SEPARATOR
+        'layout_path'  => $base . 'layouts' . DIRECTORY_SEPARATOR,
+        'parts_path'   => $base . 'parts' . DIRECTORY_SEPARATOR,
     ],
     Environment::DEV => [
         'debug' => true,
         'content_path' => $base . 'pages' . DIRECTORY_SEPARATOR,
-        'layout_path'  => $base . 'layouts' . DIRECTORY_SEPARATOR
+        'layout_path'  => $base . 'layouts' . DIRECTORY_SEPARATOR,
+        'parts_path'   => $base . 'parts' . DIRECTORY_SEPARATOR,
     ],
     Environment::PROD => [
         'debug' => false,
         'content_path' => $base . 'pages' . DIRECTORY_SEPARATOR,
-        'layout_path'  => $base . 'layouts' . DIRECTORY_SEPARATOR
+        'layout_path'  => $base . 'layouts' . DIRECTORY_SEPARATOR,
+        'parts_path'   => $base . 'parts' . DIRECTORY_SEPARATOR,
     ]
 ], Environment::ALL);
 
