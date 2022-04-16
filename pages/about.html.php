@@ -17,3 +17,22 @@ to maximize our ability to develiver <strong><?=$faker->catchPhrase()?></strong>
 <p><?=$faker->realText()?></p>
 <p><?=$faker->realText()?></p>
 
+<!-- model demo -->
+<div
+     x-data="{ open: false }"
+     x-show.transition.duration.500ms="open"
+     X-init="_ => setTimeout(_ => open = true, 2000)"
+     class="fixed inset-0 bg-white bg-opacity-75 flex items-center justify-center px-4 md:px-0">
+  <div
+       @click.away="open = false"
+       class="flex flex-col bg-white shadow-2xl rounded-lg border-2 border-gray-400 p-6">
+    <div class="flex justify-between items-center mp-4">
+      <h4 class="font-bold text-2xl mt-0 mb-0">Hey there!</h4>
+      <button @click="open = false">close</button>
+    </div>
+    <div class="mt-1 max-w-xs">
+      <p class="">Would you like us to contact you?</p>
+      <img class="w-full" src="/img/Placeholder.png" alt="Placeholder">
+    </div>
+  </div>
+</div>

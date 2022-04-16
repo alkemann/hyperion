@@ -18,7 +18,13 @@
     <li>Using <code>hx-trigger</code> with the <code>revealed</code> value is all it takes to load more in an endless scroll</li>
     <li><code>&lt;div hx-trigger="revealed" hx-get="/news/more" hx-swap="outerHTML">&lt;/div></code></li>
     <li>Each response addes another revealed trigger to continue, or omits it to end the chain.</li>
-    <li>A sleep is ended in the more view to simulate load time so we can see the load indicator</li>
+    <li>A sleep is included in the more response to simulate load time so we can see the load indicator</li>
+  </ul>
+  <li>Modal window popup on timer on <a href="/about">About page</a></li>
+  <ul class="ml-4">
+    <li>Tailing styled to be on top</li>
+    <li>Alpine triggers showing it after x seconds</li>
+    <li>Alpine interactivity on button and container to hide modal</li>
   </ul>
   <li>A todo list?</li>
 </ol>
