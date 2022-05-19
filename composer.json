@@ -5,5 +5,10 @@
         "alkemann/h2l": "dev-master",
         "alkemann/debug": "^0.4.0",
         "fakerphp/faker": "^1.19"
+    },
+    "autoload": {
+        "psr-4": {
+            "app\\": "app/"
+        }
     }
 }

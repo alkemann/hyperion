@@ -14,7 +14,7 @@ set_error_handler('app\handleWarning', E_WARNING);
 
 // Include configuration files
 require_once($CONFIG_PATH . 'environments.php');
-// require_once($CONFIG_PATH . 'connections.php');
+require_once($CONFIG_PATH . 'connections.php');
 // ***********
 
 use alkemann\h2l\{
