@@ -5,7 +5,7 @@ use alkemann\h2l\data\PDO;
 
 $host = getenv('NF_POSTGRESQL_HOST');
 if ($host) {
-    $options['scheme'] = 'postgres';
+    $options['scheme'] = 'pgsql';
     $options['host'] = $host;
     $options['user'] = getenv('NF_POSTGRESQL_USERNAME');
     $options['pass'] = getenv('NF_POSTGRESQL_PASSWORD');

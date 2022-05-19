@@ -53,4 +53,9 @@ Environment::setEnvironment(getenv('ENV') === false ? Environment::PROD : getenv
 
 Router::alias('/', 'home.html');
 
+Router::add('user', function(Request $request) {
+    $user = \app\User::get(1);
+    dd($user);
+});
+
 // Check for server host and set environment here for example
