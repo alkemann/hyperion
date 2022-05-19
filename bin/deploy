@@ -38,7 +38,7 @@ tail -n1 RELEASES.txt
 echo " "
 
 echo " - Pushing to Github (deploys Northflank) "
-git push origin release
+git push origin release:release -q -f
 
 echo " - Deploying to Heroku"
 git push heroku release:master -q -f
