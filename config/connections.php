@@ -3,18 +3,7 @@
 use alkemann\h2l\Connections;
 use alkemann\h2l\data\PDO;
 
-$host = getenv('NF_POSTGRESQL_HOST');
-if ($host) {
-    $options['scheme'] = 'pgsql';
-    $options['host'] = $host;
-    $options['user'] = getenv('NF_POSTGRESQL_USERNAME');
-    $options['pass'] = getenv('NF_POSTGRESQL_PASSWORD');
-    $options['db'] = getenv('NF_POSTGRESQL_DATABASE');
-    $options['port'] = 5432;
-    Connections::add('default', function() use ($options) { return new PDO($options); });
-}
-
-$db_url = getenv('DATABASE_URL');
+$db_url = getenv('NF_POSTGRESQL_POSTGRES_URI') ??  getenv('DATABASE_URL') ?? false;
 if ($db_url) {
     $options = parse_url($db_url);
     $options['db'] = ltrim($options['path'], '/');
