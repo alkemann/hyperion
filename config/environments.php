@@ -1,6 +1,6 @@
 <?php
 
-use alkemann\h2l\{ Log, Environment, Router, Request, Response, util\Chain, response\Page };
+use alkemann\h2l\{ Log, Environment, Request, Response, util\Chain, response\Page };
 
 $base = dirname(dirname(__FILE__)) . DIRECTORY_SEPARATOR ;
 
@@ -51,11 +51,5 @@ Environment::addMiddle(function(Request $request, Chain $chain): Response {
 // LOCAL or PROD expected
 Environment::setEnvironment(getenv('ENV') === false ? Environment::PROD : getenv('ENV'));
 
-Router::alias('/', 'home.html');
-
-Router::add('user', function(Request $request) {
-    $user = \app\User::get(1);
-    dd($user);
-});
 
 // Check for server host and set environment here for example
