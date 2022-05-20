@@ -13,3 +13,10 @@ if ($host) {
     $options['port'] = 5432;
     Connections::add('default', function() use ($options) { return new PDO($options); });
 }
+
+$db_url = getenv('DATABASE_URL');
+if ($db_url) {
+    $options = parse_url($db_url);
+    $options['db'] = ltrim($options['path'], '/');
+    Connections::add('default', function() use ($options) { return new PDO($options); });
+}
