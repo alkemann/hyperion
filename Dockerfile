@@ -1,7 +1,6 @@
-FROM heroku/heroku:20
-
+FROM node:lts-alpine as build-stage
 WORKDIR /app
-
-RUN ls
-
-
+COPY package*.json ./
+RUN npm install
+COPY . .
+RUN npm run build
