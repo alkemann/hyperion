@@ -1,6 +1,7 @@
 <div
     class="fixed inset-0 z-30 flex items-center justify-center overflow-auto bg-black bg-opacity-50"
     x-show="showModal"
+    x-cloak
   >
   <div
     class="max-w-3xl px-6 py-4 mx-auto text-left bg-white rounded shadow-lg"

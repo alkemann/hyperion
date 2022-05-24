@@ -21,6 +21,7 @@ to maximize our ability to develiver <strong><?=$faker->catchPhrase()?></strong>
 <div
      x-data="{ open: false }"
      x-show.transition.duration.500ms="open"
+     x-cloak
      X-init="_ => setTimeout(_ => open = true, 2000)"
      class="fixed inset-0 bg-white bg-opacity-75 flex items-center justify-center px-4 md:px-0">
   <div
